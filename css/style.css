@@ -120,6 +120,15 @@ img {
     text-decoration: none;
 } 
 
+.site-link.current::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--blue);
+    margin-top: 28px;
+}
 /* Info */
 
 .info-list{

@@ -31,7 +31,7 @@ li{
     list-style: none;
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, p {
     margin: 0;
 }
 
@@ -398,7 +398,6 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.18
-    /* text-align: center; */
     letter-spacing: 0.03em;
     margin: 0;
 }
@@ -679,6 +678,7 @@ margin-right: 10px;
 }
 
 .subs-title {
+    margin-bottom: 20px;
     color: var(--white);
     font-weight: 700;
     font-size: 14px;
@@ -717,10 +717,10 @@ margin-right: 10px;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    color: var(--white);
-    
+    color: var(--white);  
 }
 
 .btn-icon {
 fill: var(--white);
+margin-left: 10px;
 }

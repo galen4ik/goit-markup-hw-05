@@ -555,8 +555,8 @@ margin-right: 10px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.offer-thumb:hover .offer-overlay,
-.offer-thumb:focus-within .offer-overlay{
+.offer-card .link:hover .offer-overlay,
+.offer-card .link:focus .offer-overlay {
     transform: translateY(0);
 }
 

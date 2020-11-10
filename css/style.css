@@ -104,6 +104,8 @@ img {
 
 
 .site-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -115,13 +117,14 @@ img {
     .site-link:focus {
     color: var(--blue);
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
  .site-link.current{
     color: var(--blue);
     text-decoration: none;
+    position: relative;
 } 
 
 .site-link.current::after {
@@ -131,17 +134,21 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: var(--blue);
-    margin-top: 28px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
+
 /* Info */
 
-.info-list{
+.info-list {
     display: flex; 
     align-items: center;
     margin-left: auto;
 }
 
-.info-list .item:not(:last-child){
+.info-list .item:not(:last-child) {
     margin-right: 50px;
 }
 
@@ -155,11 +162,12 @@ img {
     letter-spacing: 0.02em;
     text-decoration: none;   
 }
+
 .info:hover,
 .info:focus {
     color: var(--blue);
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon {
@@ -193,14 +201,13 @@ img {
     background-color: var(--hero-footer-bcg); 
 }
 
-.hero-cont{
+.hero-cont {
     display: flex;
     flex-direction: column;
     align-items: center
-
 }
 
-.hero-title{
+.hero-title {
     width: 696px;
     margin-bottom: 30px;
 
@@ -209,12 +216,11 @@ img {
     font-size: 44px;
     line-height: 1.36;
     
-  
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
-.btn{
+.btn {
     display: inline-block;
     min-width: 200px;
     height: 50px;
@@ -223,18 +229,21 @@ img {
     color: var(--white);
     background-color: var(--blue);
     text-decoration: none;
+    border: 0;
     border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;  
 }
+
 .btn:hover,
 .btn:focus {
     color: var(--blue);
     background-color: var(--white);
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* Модальное окно */
 .backdrop {
     position: fixed;
@@ -242,7 +251,7 @@ img {
     left: 0;
 
     opacity: 1;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: 100%;
 
@@ -266,7 +275,7 @@ img {
     background-color: var(--white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -369,13 +378,13 @@ img {
     bottom: 0;
     left: 0;
 
+    padding-top: 27px;
     background-color: rgba(47, 48, 58, 0.8);
     width: 100%;
     height: 70px;
 }
 
 .occup-overlay-text {
-    margin-top: 27px;
     margin-bottom: 0;
     
     color: var(--white);
@@ -474,7 +483,7 @@ margin-right: 10px;
     fill: var(--white);
     background-color: var(--blue);
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -567,8 +576,7 @@ margin-right: 10px;
     color: var(--white);
     background-color: var(--blue);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /* Оффер */
@@ -710,7 +718,7 @@ margin-right: 10px;
 .f-address:hover,
 .f-address:focus {
     color: var(--blue);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -728,7 +736,7 @@ margin-right: 10px;
 
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.71
+    line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration: none;   
 }
@@ -736,7 +744,7 @@ margin-right: 10px;
 .footer-info:hover,
 .footer-info:focus {
     color: var(--blue);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -768,8 +776,8 @@ margin-right: 10px;
 .social-link-footer:hover,
 .social-link-footer:focus {
     background-color: var(--blue);
-    
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 

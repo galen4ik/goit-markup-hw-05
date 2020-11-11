@@ -9,6 +9,8 @@
   --bcg-team: #f5f4fa;
   --icon-fill-col: #afb1b8;
   --overlay-blue: rgba(33, 150, 243, 0.9);
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -121,22 +123,24 @@ img {
 }
 
 .site-link.current {
+  position: relative;
+
   color: var(--blue);
   text-decoration: none;
-  position: relative;
 }
 
 .site-link.current::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--blue);
-
   position: absolute;
   left: 0;
   bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  content: " ";
+  display: block;
+
+  border-radius: 2px;
+  background-color: var(--blue);
 }
 
 /* Info */
@@ -228,14 +232,15 @@ img {
   height: 50px;
   padding: 10px 32px;
 
-  color: var(--white);
-  background-color: var(--blue);
-  text-decoration: none;
   border: 0;
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+
+  color: var(--white);
+  background-color: var(--blue);
+  text-decoration: none;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -382,10 +387,11 @@ img {
   bottom: 0;
   left: 0;
 
-  padding-top: 27px;
-  background-color: rgba(47, 48, 58, 0.8);
   width: 100%;
   height: 70px;
+  padding-top: 27px;
+
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .occup-overlay-text {
@@ -464,9 +470,9 @@ img {
 }
 
 .social-list {
+  margin-top: 16px;
   display: flex;
   justify-content: center;
-  margin-top: 16px;
 }
 
 .social-item:not(:last-child) {
@@ -620,12 +626,14 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(100%);
+
   width: 100%;
   height: 100%;
-  background-color: var(--overlay-blue);
   padding: 63px 24px;
 
-  transform: translateY(100%);
+  background-color: var(--overlay-blue);
+
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -672,6 +680,7 @@ img {
 }
 
 /* footer */
+
 .footer {
   height: 252px;
   padding-top: 60px;
@@ -702,6 +711,7 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+
 .footer-span {
   color: var(--white);
 }
